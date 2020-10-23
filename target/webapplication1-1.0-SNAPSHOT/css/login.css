@@ -1,0 +1,103 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: sans-serif;
+    background: linear-gradient(120deg, #bdc3c7, #2c3e50);
+}
+
+.maincontainer{
+    background: white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50% , -50%);
+    width: 400px;
+    border-radius: 10px;
+}
+
+.headertitle{
+    text-align: center;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid lightgray;
+}
+
+form{
+    padding: 10px 40px;
+    box-sizing: border-box;
+}
+
+.textField{
+    position: relative;
+    margin:20px 0;
+    border-bottom: lightgray solid 1px;
+    font-size: 14px;
+}
+
+.textField input{
+    width:100%;
+    height:40px;
+    border:none;
+    outline: none;
+    background: none;
+}
+
+.textField label{
+    position: absolute;
+    top:50%;
+    left:5px;
+    color: lightgray;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: .5s;
+}
+
+.textField span::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    top:40px;
+    left:0px;
+    height:2px;
+    background: lightslategray;
+    transition: .7s;
+}
+
+.textField input:focus ~ label, .textField label:valid ~ label{
+    top: -5%;
+    color: lightslategray;
+}
+
+.textField input:focus ~ span::before,
+.textField input:valid ~ span::before{
+    width: 100%;
+}
+
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 20px;
+    border: solid 1px whitesmoke;
+    background: lightgray;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    border: solid 2px lightgray;
+    transition: .5s;
+}
+
+input[type="reset"] {
+    background: none;
+    border: none;
+    outline: none;
+    text-decoration: underline;
+    color: black;
+    cursor: pointer;
+  }
+  input[type="reset"]:hover {
+    color: lightblue;
+  }
